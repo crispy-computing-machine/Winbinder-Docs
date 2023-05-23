@@ -1,0 +1,96 @@
+<html>
+<head>
+<link rel="stylesheet" href="../help.css">
+<title>Running WinBinder</title>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+<!--KW:
+Notes
+Scratchpad-->
+<h2>Running WinBinder</h2>
+<h1>Associating the PHPW extension with WinBinder</h1>
+<p>To run WinBinder scripts for Windows Explorer, you have to associate .phpw files with php-win.exe.
+You can accomplish this in several ways.</p>
+<p><b>Option 1.</b> If you use the WinBinder installer, this will be done automatically
+for you.</p>
+<p><b>Option 2.</b> To manually associate the <b>.phpw</b> extension to php-win.exe:</p>
+<ol type="1">
+    <li>In
+Explorer, go to Tools - Folder options and select the File Types tab.</li>
+    <li>Press New.</li>
+    <li>From there, you probably have to browse for the php-win.exe file</li>
+    <li>Then
+you have the option of always using that program for .phpw files. Check it.</li>
+</ol>
+<p>In Windows 2000
+or Windows XP, you can right-click on the .phpw file and select &quot;Open With...&quot;.&nbsp;In some cases, you might need to hold down Shift for the &quot;Open With...&quot;
+to appear.</p>
+<p>To associate the phpw extension with WinBinder: In Windows Explorer, go to
+Tools / Folder options, then select the File types tab. Click New. This will
+open a small dialog. Type phpw, then click OK. A new item will show up on the
+list box. The click the Advanced button. This will open a new dialog box. Click
+New. Another dialog shows up. In the Action field, type open. In the Application
+field, type (or navigate to) the path to php-win.exe, followed by &quot;%1&quot;
+(with quotes). Example:</p>
+<p>C:\WinBinder\PHP\PHP5\php-win.exe &quot;%1&quot;</p>
+<p>Click OK to close the dialog, then OK, then Close. Now you may execute a
+PHPW script just by double-clicking it.</p>
+<p><b>Option 3.</b> You can also create a FILENAME.REG file to do this for you:</p>
+<ol type="1">
+    <li>Create
+a text file with Notepad or whatever</li>
+    <li>Give it a .reg extension</li>
+    <li>Place the
+following lines in it:</li>
+</ol>
+<p><code>[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.phpw]<br>@=&quot;phpw_auto_file&quot;<br>[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\phpw_auto_file]<br>@=&quot;PHP Winbinder App&quot;<br>[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\phpw_auto_file\shell]<br>@=&quot;open&quot;<br>[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\phpw_auto_file\shell\open]<br>@=&quot;Run Winbinder App&quot;<br>[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\phpw_auto_file\shell\open\command]<br>@=&quot;\&quot;C:\\PHP\\WinBinder\\PHP\\PHP4\\php-win.exe\&quot; \&quot;%1\&quot;&quot;</code></p>
+<p>Be sure to change the line C:\\PHP\\WinBinder\\PHP.... &nbsp;to the path
+where you have your php-win.exe. &nbsp;&nbsp;Also take note of the extra \'s...
+just like when you have to escape slashes and quotes (a la addslashes()) in
+PHP. &nbsp;You only use it on the @=&quot;&quot; bits, not in the parts between
+the []'s.</p>
+<p>Another note, You see the words &quot;open&quot; appear in there? &nbsp;If
+you copy all those lines and change &quot;open&quot; to &quot;edit&quot; or
+something you can create a new right-click option for your files.</p>
+<p>The @=&quot;open&quot; on the ones ending in \shell needs to match the shell\open
+&nbsp;(that is, if you had @=&quot;edit&quot; you'd then need a corresponding
+shell\edit)</p>
+<p>And the @=&quot;Run Winbinder App&quot; on the shell\open is the text that
+appears in the right-click menu for PHPW files.</p>
+<p>Example... to add &quot;Edit PHPW With Notepad&quot; you'd add the following
+lines to what's already above (at the end probably):</p>
+<p><code>[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\phpw_auto_file\shell\edit]<br>@=&quot;Edit Winbinder App with Notepad&quot;<br>[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\phpw_auto_file\shell\edit\command]<br>@=&quot;%SystemRoot%\\system32\\NOTEPAD.EXE\&quot; \&quot;%1\&quot;</code></p>
+<p>And if you wanted to make this &quot;edit with notepad&quot; the default
+double-click action, you'd change the one entry above to be the following:</p>
+<p><code>[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\phpw_auto_file\shell]<br>@=&quot;edit&quot;</code></p>
+<p>Now you will see &quot;Edit Winbinder App with Notepad&quot; appear in bold
+on the right-click menu.</p>
+<p>Once you get everything in your .REG file, just double click on it and it'll
+ask you if you want to add these lines to your registry.</p>
+<p>These changes will happen immediately when you edit the registry with regedit
+or will happen as soon as you click &quot;yes&quot; after double-clicking on
+the .REG file you created with this stuff in it.</p>
+<p>DISCLAIMER!!: &nbsp;This alters your registry. &nbsp;If you do it exactly
+as I've stated, it won't hurt anything. &nbsp;But if you change it (particularly
+the parts between the []'s) it could overwrite important system data (although
+it'd take a fluke to hit something critical I think..so the chances are still
+relatively low). &nbsp;If this worries you or you're not sure what this is all
+about, don't do it. &nbsp;Stick with the OPEN WITH thing on the right-click
+or shift-right-click menu. &nbsp;It does effectively the same thing but only
+lets you set the default double-click action, not alternate edit/open/etc. actions.</p>
+<h1>Running WinBinder without a console (DOS) window</h1>
+<ul>
+    <li>Use php-win.exe instead of php.exe</li>
+    <li>Optionally associate .phpw files with php-win.exe (see above)</li>
+    <li>Suppress all your output: no <b>echo()</b>, <b>print()</b>, <b>printf()</b>,
+    <b>print_r()</b>&nbsp;etc. in your script. If you do not do that, your script
+    may not run at all.</li>
+    <li>Suppress errors: use <i>error_reporting = 0</i>&nbsp;in PHP.INI. If
+    you do not do that, your script may not run at all with php-win.exe.</li>
+    <li>Optionally use <i>display_errors = Off</i>&nbsp;in PHP.INI. If you set
+    <i>error_reporting = 0</i> this is not necessary.</li>
+</ul>
+<p>&nbsp;</p>
+</body>
+
+</html>

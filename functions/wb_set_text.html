@@ -1,0 +1,221 @@
+<html>
+
+<head>
+<title>wb_set_text</title>
+<meta name="generator" content="Namo WebEditor v5.0">
+
+
+<link rel="stylesheet" href="../help.css">
+
+
+</head>
+
+<body>
+<!--KW:
+wb_set_text
+-->
+<h2>wb_set_text</h2>
+<p>bool <b>wb_set_text</b> (int wbobject, mixed text [, int item [, int subitem]])</p>
+<p>Sets the text of a WinBinder object. <b>wb_set_text</b> can also rename  or create items 
+in certain controls. The actual
+action depends on the object class. Returns
+<code>TRUE</code> on success or&nbsp;<code>FALSE</code> if an error occurs.</p>
+<h1><b>Control class information</b></h1>
+<p>See the following table.</p>
+<table border="1" cellspacing="0" bordercolordark="white" bordercolorlight="black" width="70%">
+    <tr>
+        <th width="87">            <p>Class</p>
+        </th>
+        <th width="52">            <p>Type</p>
+        </th>
+        <th width="535">            <p>Action</p>
+        </th>
+    </tr>
+    <tr>
+        <td width="87">
+            <p><a href="../classes/checkbox.html">CheckBox</a></p>
+        </td>
+        <td width="52">
+<p>String</p>
+        </td>
+        <td width="535">
+            <p>Sets the text of the control.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="87">
+            <p><a href="../classes/combobox.html">ComboBox</a></p>
+        </td>
+        <td width="52">
+            <p>Array</p>
+        </td>
+        <td width="535">
+            <p>Creates items, one per array element.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="87">
+<p><a href="../classes/editbox.html">EditBox</a></p>
+        </td>
+        <td width="52">
+<p>String</p>
+        </td>
+        <td width="535">
+            <p>Sets the text of the control.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="87">
+<p><a href="../classes/frame.html">Frame</a></p>
+        </td>
+        <td width="52">
+<p>String</p>
+        </td>
+        <td width="535">
+            <p>Sets the text of the control.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="87">
+            <p><a href="../classes/hyperlink.html">HyperLink</a></p>
+        </td>
+        <td width="52">
+<p>String</p>
+        </td>
+        <td width="535">
+            <p>Sets the text of the control.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="87">
+            <p><a href="../classes/label.html">Label</a></p>
+        </td>
+        <td width="52">
+<p>String</p>
+        </td>
+        <td width="535">
+            <p>Sets the text of the control.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="87">
+            <p><a href="../classes/listbox.html">ListBox</a></p>
+        </td>
+        <td width="52">
+            <p>Array</p>
+        </td>
+        <td width="535">
+            <p>Creates items, one per array element.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="87">
+            <p><a href="../classes/listview.html">ListView</a></p>
+        </td>
+        <td width="52">
+            <p>Array</p>
+        </td>
+        <td width="535">
+            <p>Creates column titles, one per array element, or changes cell 
+            contents.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="87">
+            <p><a href="../classes/menu.html">Menu</a></p>
+        </td>
+        <td width="52">
+            <p>String</p>
+        </td>
+        <td width="535">
+            <p>Sets the text of the menu item specified by the <i>item</i> identifier.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="87">
+            <p><a href="../classes/pushbutton.html">PushButton</a></p>
+        </td>
+        <td width="52">
+<p>String</p>
+        </td>
+        <td width="535">
+            <p>Sets the text of the control.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="87">
+            <p><a href="../classes/radiobutton.html">RadioButton</a></p>
+        </td>
+        <td width="52">
+<p>String</p>
+        </td>
+        <td width="535">
+            <p>Sets the text of the control.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="87">
+            <p><a href="../classes/rtfeditbox.html">RTFEditBox</a></p>
+        </td>
+        <td width="52">
+<p>String</p>
+        </td>
+        <td width="535">
+            <p>Sets the text of the control.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="87">
+            <p><a href="../classes/statusbar.html">StatusBar</a></p>
+        </td>
+        <td width="52">
+<p>String</p>
+        </td>
+        <td width="535">
+            <p>Sets the text of the status bar.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="87">
+            <p><a href="../classes/tabcontrol.html">TabControl</a></p>
+        </td>
+        <td width="52">
+            <p>Array</p>
+        </td>
+        <td width="535">
+            <p>Creates or renames tab pages.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="87">
+            <p><a href="../classes/treeview.html">TreeView</a></p>
+        </td>
+        <td width="52">
+            <p>Array</p>
+        </td>
+        <td width="535">
+            <p>Creates or renames treeview nodes.</p>
+        </td>
+    </tr>
+</table>
+<h1><b>Window class information</b>
+</h1>
+<p>For all classes of windows and dialog boxes, <b>wb_set_text()</b> sets the
+window title.</p>
+<h1><b>Example</b></h1>
+<table border="0" bgcolor="#E0E0E0" cellpadding="5" >
+<tr><td>
+<p><code>wb_set_text($PushButton, &quot;OK&quot;) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+            Sets the text of a button<br>wb_set_text($ComboBox, &quot;Item 1\nItem
+            2\nItem 3&quot;)&nbsp;&nbsp;// Creates items on a combo box<br>wb_set_text($TabControl,
+            &quot;Tab 1\nTab 2\nTab 3&quot;) &nbsp;&nbsp;// Creates tabs on
+            a tab control</code></p>
+</td></tr>
+</table>
+<h1><b>See also</b></h1>
+<p><a href="wb_get_text.html"><b>wb_get_text<br></b></a><a href="../reference/functions_category.html#control">Control functions</a><br><a href="../reference/functions_category.html#window">Window functions</a></p>
+
+<p>&nbsp;</p>
+</body>
+
+</html>

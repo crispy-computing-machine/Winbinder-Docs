@@ -1,0 +1,41 @@
+<html>
+
+<head>
+<title>wb_create_control</title>
+<meta name="generator" content="Namo WebEditor v5.0">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<!--KW:
+wb_create_control
+-->
+<h2>wb_create_control<br></h2>
+<p>int <b>wb_create_control</b> (int parent, int ctlclass [, mixed caption [,
+int xpos [, int ypos [, int width [, int height [, int id [, int style [, int
+param [, int&nbsp;ntab]]]]]]]]])</p>
+<p>Creates a window control, menu, toolbar, status bar or accelerator.</p>
+<h1><b>Parameters</b></h1>
+<p><i><b>parent</b></i> is a handle to the WinBinder object that is the parent window.<br><i><b>ctlclass</b></i>
+is the class of the control or object&nbsp;to be created. Click <a href="../reference/classes_control.html">here</a> for a list of the available control
+classes.<br><i><b>caption</b></i> is either a string with the caption of the control, an
+array of captions, or an array of arrays with information, depending on the
+control class.<br><i><b>xpos</b></i>,
+<i><b>ypos</b></i>, <i><b>width</b></i> and <i><b>height</b></i> describe the position and dimensions
+of the control when required.<br><i><b>id</b></i> is an integer that identifies the
+control. It must be unique if the control is to be processed by a&nbsp;<a href="wb_set_handler.html">callback
+function</a>.<br><i><b>style</b></i> contains the <a href="../reference/constants.html#style_flags">style
+flags</a>.<br><i><b>param</b></i> is an optional integer value that depends on the
+control class.<br><i><b>ntab</b></i> is the index of the <a href="../classes/tabcontrol.html">tab
+page</a> that the control is to be inserted on, if any.</p>
+<h1><b>Return value</b></h1>
+<p>This function returns an integer that is a handle to the WinBinder object
+created, or NULL if the function fails.</p>
+
+<h1><b>See also</b></h1>
+<p><a href="wb_create_window.html"><b>wb_create_window</b></a><b><br></b><a href="../reference/classes_control.html">Control classes</a><br><a href="../reference/functions_category.html#control">Control functions</a><br><a href="../classes/tabcontrol.html">TabControl
+class</a></p>
+
+<p>&nbsp;</p>
+</body>
+
+</html>

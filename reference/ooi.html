@@ -1,0 +1,661 @@
+<html>
+<head>
+<title>Object-oriented interface</title>
+<meta name="generator" content="Namo WebEditor v5.0">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<!--KW:
+Objects
+Object-oriented interface
+-->
+<h2><b>Object-oriented interface</b></h2>
+<p><font color="red">This document...***********</font></p>
+<p>Key:</p>
+<table border="1" width="984" cellspacing="0" bordercolordark="white" bordercolorlight="black">
+    <tr>
+        <td width="52">
+            <p><img src="../images/class_static.png" width="16" height="16" border="0"></p>
+        </td>
+        <td width="922">
+            <p>&nbsp;[-]: Static class, you should access it by using the &quot;::&quot; 
+            operator.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="52">
+            <p><img src="../images/class_parent.png" width="16" height="16" border="0"></p>
+        </td>
+        <td width="922">
+            <p>&nbsp;[+]: Parent class, you cannot initialize them </p>
+        </td>
+    </tr>
+    <tr>
+        <td width="52">
+            <p><img src="../images/class_final.png" width="16" height="16" border="0"></p>
+        </td>
+        <td width="922">
+            <p>&nbsp;[&gt;]: Final class, you may initialize them</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="52">
+            <p><img src="../images/class_init.png" width="16" height="16" border="0"></p>
+        </td>
+        <td width="922">
+            <p>&nbsp;[@]: You can initialize them, but that's not recommended.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="52">
+            <p><img src="../images/class_no.png" width="16" height="16" border="0"></p>
+        </td>
+        <td width="922">
+            <p>&nbsp;[!]: Buggy or not implemented</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="52">
+            <p><img src="../images/class_attrib.png" width="16" height="16" border="0"></p>
+        </td>
+        <td width="922">
+            <p>&nbsp;&nbsp;a : Attribute of a class. You may be able to read 
+            and modify them</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="52">
+            <p><img src="../images/class_virtual.png" width="16" height="16" border="0"></p>
+        </td>
+        <td width="922">
+            <p>&nbsp;&nbsp;v : Virtual attribute of a class. You may be able 
+            to read and modify them</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="52">
+            <p><img src="../images/class_method.png" width="16" height="16" border="0"></p>
+        </td>
+        <td width="922">
+            <p>&nbsp;&nbsp;m : Method of a class.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="52">
+            <p><img src="../images/class_comment.png" width="16" height="16" border="0"></p>
+        </td>
+        <td width="922">
+            <p>&nbsp;&nbsp;# : Comments</p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<table width="984" cellpadding="0" cellspacing="0">
+    <tr>
+        <td width="41">            <p><img src="../images/class_static.png" width="16" height="16" border="0">Wb</p>
+        </td>
+        <td width="213">
+            <p>&nbsp;</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_comment.png" width="16" height="16" border="0"> Auxiliary functions</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213">            <p><img src="../images/class_method.png" width="16" height="16" border="0"> generateIni</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_method.png" width="16" height="16" border="0"> getFolderFiles</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_method.png" width="16" height="16" border="0"> parseIni</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_method.png" width="16" height="16" border="0"> parseRc 
+            <font size="1">¹</font></p>
+        </td>
+        <td width="567"><p>($filename, 
+$winvar, $classname, $width, $height, $posx, $posy, $parent, $style, $notify)</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213">            <p><img src="../images/class_method.png" width="16" height="16" border="0"> generateIni</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_method.png" width="16" height="16" border="0"> getFolderFiles</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_comment.png" width="16" height="16" border="0"> Windows functions</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213">            <p><img src="../images/class_method.png" width="16" height="16" border="0"> exec</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_method.png" width="16" height="16" border="0"> findFile</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_method.png" width="16" height="16" border="0"> getRegistryKey</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_method.png" width="16" height="16" border="0"> getSystemInfo</p>
+        </td>
+        <td width="567"><p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213">            <p><img src="../images/class_method.png" width="16" height="16" border="0"> mainLoop</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_method.png" width="16" height="16" border="0"> playSound</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213">            <p><img src="../images/class_method.png" width="16" height="16" border="0"> setRegistryKey</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_comment.png" width="16" height="16" border="0"> Low-level 
+            functions</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_method.png" width="16" height="16" border="0"> getAddress</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_method.png" width="16" height="16" border="0"> peek</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_method.png" width="16" height="16" border="0"> poke</p>
+        </td>
+        <td width="567"><p></p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213">            <p><img src="../images/class_method.png" width="16" height="16" border="0"> sendMessage</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_comment.png" width="16" height="16" border="0"> Predef 
+            dialogs</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213">            <p><img src="../images/class_method.png" width="16" height="16" border="0"> sysDlgColor</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213">            <p><img src="../images/class_method.png" width="16" height="16" border="0"> sysDlgOpen</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_method.png" width="16" height="16" border="0"> sysDlgPath</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_method.png" width="16" height="16" border="0"> sysDlgSave</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_comment.png" width="16" height="16" border="0"> Extra 
+            functions</p>
+        </td>
+        <td width="567"><p></p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213">            <p><img src="../images/class_method.png" width="16" height="16" border="0"> findObjFromHandler</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="41">
+            <p>&nbsp;</p>
+        </td>
+        <td width="213"><p><img src="../images/class_comment.png" width="16" height="16" border="0"> Predef 
+            dialogs</p>
+        </td>
+        <td width="567">
+            <p>&nbsp;</p>
+        </td>
+        <td width="163">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+</table>
+<p><font size="1">¹ Please read the considerations 
+about this method in ooi_wb.php.</font></p>
+<p>[-]WbDatabase</p>
+<p>&nbsp;| # Won't implement.. It's not necessary</p>
+<p>&nbsp;</p>
+<p>[&gt;]WbImage</p>
+<p>&nbsp;|m create &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($width, $height)</p>
+<p>&nbsp;|m createMask &nbsp;&nbsp;($transparentColor)</p>
+<p>&nbsp;|m destroy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;() // auto-called on class 
+destroy</p>
+<p>&nbsp;|m load &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($filename, 
+$index=0)</p>
+<p>&nbsp;|m getImageSize ($filename)</p>
+<p>&nbsp;|m save &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($filename)</p>
+<p>&nbsp;|m getPixel &nbsp;&nbsp;&nbsp;&nbsp;($xpos, $ypos)</p>
+<p>&nbsp;|m setPixel &nbsp;&nbsp;&nbsp;&nbsp;($xpos, $ypos, $color)</p>
+<p>&nbsp;</p>
+<p>[@]WbObject ($address)</p>
+<p>&nbsp;|a address # WARNING:</p>
+<p>&nbsp;|v handle &nbsp;#</p>
+<p>&nbsp;|v id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# &nbsp;&nbsp;These are low-level 
+properties.</p>
+<p>&nbsp;|v wbclass # &nbsp;&nbsp;Be careful when you change it.</p>
+<p>&nbsp;|v item &nbsp;&nbsp;&nbsp;# &nbsp;&nbsp;After modifying any value, 
+you must call</p>
+<p>&nbsp;|v subitem # &nbsp;&nbsp;&quot;update()&quot; method, so the new values 
+will be</p>
+<p>&nbsp;|v style &nbsp;&nbsp;# &nbsp;&nbsp;inserted into memory... </p>
+<p>&nbsp;|v parent &nbsp;# </p>
+<p>&nbsp;|v handler # &nbsp;&nbsp;Please, modify it ONLY if you know what are 
+you doing.</p>
+<p>&nbsp;|v lparam &nbsp;#</p>
+<p>&nbsp;|</p>
+<p>&nbsp;|[+]WbWidget</p>
+<p>&nbsp;| |v visible &nbsp;&nbsp;&nbsp;&nbsp;(wb_[gs]et_visible)</p>
+<p>&nbsp;| |v text &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(wb_[gs]et_text)</p>
+<p>&nbsp;| |v width &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(wb_[gs]et_size)</p>
+<p>&nbsp;| |v height &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(wb_[gs]et_size)</p>
+<p>&nbsp;| |v left &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(wb_[gs]et_position)</p>
+<p>&nbsp;| |v top &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(wb_[gs]et_position)</p>
+<p>&nbsp;| |m refresh &nbsp;&nbsp;&nbsp;&nbsp;()</p>
+<p>&nbsp;| |m sendMessage ($message, $wparam, $lparam)</p>
+<p>&nbsp;| |m setFocus &nbsp;&nbsp;&nbsp;()</p>
+<p>&nbsp;| |m setImage &nbsp;&nbsp;&nbsp;(string &nbsp;$source, $index, $trasparent_color, 
+lparam)</p>
+<p>&nbsp;| | &nbsp;¯¯¯¯¯¯¯¯\or (WbImage $source)</p>
+<p>&nbsp;| |m setPosition ($posx, $posy)</p>
+<p>&nbsp;| |</p>
+<p>&nbsp;| |[+]WbHolder</p>
+<p>&nbsp;| | |m getControl ($id)</p>
+<p>&nbsp;| | |[+]WbWindow</p>
+<p>&nbsp;| | | |m setHandler &nbsp;&nbsp;($callback)</p>
+<p>&nbsp;| | | |m destroy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;()</p>
+<p>&nbsp;| | | |m startTimer &nbsp;&nbsp;($id, $interval)</p>
+<p>&nbsp;| | | |m destroyTimer ($id)</p>
+<p>&nbsp;| | | |m getPixel &nbsp;&nbsp;&nbsp;&nbsp;($xpos, $ypos)</p>
+<p>&nbsp;| | | |m setPixel &nbsp;&nbsp;&nbsp;&nbsp;($xpos, $ypos, $color)</p>
+<p>&nbsp;| | | |m addControl &nbsp;&nbsp;($class_name, ...)</p>
+<p>&nbsp;| | | |[&gt;]WbAppWindow &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($caption=false, 
+$posx=false, $posy=false, $width=false, $height=false, $style=false, $lparam=false)</p>
+<p>&nbsp;| | | |[&gt;]WbPopupWindow &nbsp;&nbsp;&nbsp;&nbsp;($caption=false, 
+$posx=false, $posy=false, $width=false, $height=false, $style=false, $lparam=false)</p>
+<p>&nbsp;| | | |[&gt;]WbResizableWindow ($caption=false, $posx=false, $posy=false, 
+$width=false, $height=false, $style=false, $lparam=false)</p>
+<p>&nbsp;| | | |[&gt;]WbModalDialog &nbsp;&nbsp;&nbsp;&nbsp;($parent, $caption=false, 
+$posx=false, $posy=false, $width=false, $height=false, $style=false, $lparam=false)</p>
+<p>&nbsp;| | | |[&gt;]WbModelessDialog &nbsp;($parent, $caption=false, $posx=false, 
+$posy=false, $width=false, $height=false, $style=false, $lparam=false)</p>
+<p>&nbsp;| | | |[&gt;]WbToolDialog &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($parent, $caption=false, 
+$posx=false, $posy=false, $width=false, $height=false, $style=false, $lparam=false)</p>
+<p>&nbsp;| | |</p>
+<p>&nbsp;| |</p>
+<p>&nbsp;| |[+]WbControl</p>
+<p>&nbsp;| | |v enabled &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[wb_gset_enabled]</p>
+<p>&nbsp;| | |v value &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[wb_gset_value]</p>
+<p>&nbsp;| | |v selected &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[wb_gset_selected]</p>
+<p>&nbsp;| | |[!]WbCalendar &nbsp;&nbsp;&nbsp;&nbsp;($parent, $posx, $posy, 
+$width, $height, $caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | |[&gt;]WbCheckBox &nbsp;&nbsp;&nbsp;&nbsp;($parent, $posx, $posy, 
+$width, $height, $caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | | |v checked &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[wb_gset_value]</p>
+<p>&nbsp;| | |[&gt;]WbEditBox &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($parent, $posx, 
+$posy, $width, $height, $caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | |[&gt;]WbFrame &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($parent, 
+$posx, $posy, $width, $height, $caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | |[&gt;]WbGauge &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($parent, 
+$posx, $posy, $width, $height, $caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | |[!]WbHTMLControl &nbsp;($parent, $posx, $posy, $width, $height, 
+$caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | |[!]WbHyperlink &nbsp;&nbsp;&nbsp;($parent, $posx, $posy, $width, 
+$height, $caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | |[&gt;]WbLabel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($parent, 
+$posx, $posy, $width, $height, $caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | |[&gt;]WbPushButton &nbsp;&nbsp;($parent, $posx, $posy, $width, 
+$height, $caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | |[&gt;]WbRadioButton &nbsp;($parent, $posx, $posy, $width, $height, 
+$caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | | |v checked &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[wb_gset_value]</p>
+<p>&nbsp;| | |[&gt;]WbRTFEditBox &nbsp;&nbsp;($parent, $posx, $posy, $width, 
+$height, $caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | |[&gt;]WbScrollBar &nbsp;&nbsp;&nbsp;($parent, $posx, $posy, $width, 
+$height, $caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | |[&gt;]WbSlider &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($parent, $posx, 
+$posy, $width, $height, $caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | |[&gt;]WbSpinner &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($parent, $posx, 
+$posy, $width, $height, $caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | |[&gt;]WbStatusBar &nbsp;&nbsp;&nbsp;($parent, $posx, $posy, $width, 
+$height, $caption, $id, $style, $lparam)</p>
+<p>&nbsp;| | |</p>
+<p>&nbsp;| | |[&gt;]WbTabControl &nbsp;&nbsp;($parent, $posx, $posy, $width, 
+$height, $id, $style, $lparam)</p>
+<p>&nbsp;| | | |a selected</p>
+<p>&nbsp;| | | |m next &nbsp;&nbsp;()</p>
+<p>&nbsp;| | | |m back &nbsp;&nbsp;()</p>
+<p>&nbsp;| | | |m end &nbsp;&nbsp;&nbsp;()</p>
+<p>&nbsp;| | | |m first &nbsp;()</p>
+<p>&nbsp;| | |</p>
+<p>&nbsp;| | |[&gt;]WbTab &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($tabcontrol, 
+$description)</p>
+<p>&nbsp;| | | |a index</p>
+<p>&nbsp;| | | |a controller</p>
+<p>&nbsp;| | | |m focus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;()</p>
+<p>&nbsp;| | | |m addControl ($class_name, ...)</p>
+<p>&nbsp;| | |</p>
+<p>&nbsp;| | |[&gt;]WbToolBar ($parent)</p>
+<p>&nbsp;| | | |m setIconPallete ($filename, $width, $height)</p>
+<p>&nbsp;| | | |m addButton &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($id, $description, 
+$icon_index) # if all null, a separator is created</p>
+<p>&nbsp;| | | |m finished &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;()</p>
+<p>&nbsp;| | |</p>
+<p>&nbsp;| | |[&gt;]WbAccel &nbsp;&nbsp;($parent)</p>
+<p>&nbsp;| | | |m addAccel ($id, $keys)</p>
+<p>&nbsp;| | | |m finished ()</p>
+<p>&nbsp;| | |</p>
+<p>&nbsp;| | |[&gt;]WbMenu &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($parent)</p>
+<p>&nbsp;| | | |m addItem &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($group_name)</p>
+<p>&nbsp;| | | |¯¯¯¯¯¯¯¯¯¯¯\or ($id, $text, $image, $accel) # [this will return 
+a WbMenuItem object]</p>
+<p>&nbsp;| | | |m finished()</p>
+<p>&nbsp;| | | </p>
+<p>&nbsp;| | |[&gt;]WbMenuItem ($parent, $menu_complete)</p>
+<p>&nbsp;| | | |a parent &nbsp;# All atributes listed in here, can be modified 
+only before</p>
+<p>&nbsp;| | | |a id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# parent::finished() method.</p>
+<p>&nbsp;| | | |a text &nbsp;&nbsp;&nbsp;#</p>
+<p>&nbsp;| | | |a hint &nbsp;&nbsp;&nbsp;# The virtual properties, extended 
+from WbWidget and WbControl only will</p>
+<p>&nbsp;| | | |a image &nbsp;&nbsp;# work if used AFTER parent::finished(). 
+Otherwise, an error will be displayed.</p>
+<p>&nbsp;| | | |a accel &nbsp;&nbsp;#</p>
+<p>&nbsp;| | | |v checked &nbsp;&nbsp;[wb_gset_value]</p>
+<p>&nbsp;| | |</p>
+<p>&nbsp;| | |[+]WbListBoxes</p>
+<p>&nbsp;| | | |v selectedValue &nbsp;(special attribute, wich returns the selected 
+'name')</p>
+<p>&nbsp;| | | |v selectedDesc &nbsp;&nbsp;(special attribute, wich returns 
+the selected 'description')</p>
+<p>&nbsp;| | | |m addOption &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($value, $inner) # 
+like &lt;option name=&quot;$value&quot;&gt;$inner&lt;/option&gt;</p>
+<p>&nbsp;| | | |m deleteOption &nbsp;&nbsp;($index, $length)</p>
+<p>&nbsp;| | | |m clearOptions &nbsp;&nbsp;()</p>
+<p>&nbsp;| | | |m refreshOptions ()</p>
+<p>&nbsp;| | | |m sort &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($ascending)</p>
+<p>&nbsp;| | | |[&gt;] WbComboBox &nbsp;&nbsp;($parent, $posx, $posy, $width, 
+$height, $options, $id, $style, $lparam)</p>
+<p>&nbsp;| | | |[&gt;] WbListBox &nbsp;&nbsp;&nbsp;($parent, $posx, $posy, $width, 
+$height, $options, $id, $style, $lparam)</p>
+<p>&nbsp;| | |</p>
+<p>&nbsp;| | |[+]WbContainer</p>
+<p>&nbsp;| | | |m addItems &nbsp;&nbsp;&nbsp;&nbsp;($items, $clear, $param)</p>
+<p>&nbsp;| | | |m deleteItem &nbsp;&nbsp;($startItem, $length)</p>
+<p>&nbsp;| | | |m getItemCount ()</p>
+<p>&nbsp;| | | |m setItem &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($index, $item)</p>
+<p>&nbsp;| | | |m setItemImage ($item, $image)</p>
+<p>&nbsp;| | | |m sort &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($ascending, 
+$subitem)</p>
+<p>&nbsp;| | | |[&gt;]WbListView &nbsp;($parent, $posx, $posy, $width, $height, 
+$columns, $id, $style, $lparam)</p>
+<p>&nbsp;| | | |[&gt;]WbTreeView &nbsp;($parent, $posx, $posy, $width, $height, 
+$id, $style, $lparam)</p>
+<p>&nbsp;| | |</p>
+<p>&nbsp;| |</p>
+<p>&nbsp;|</p>
+<p>The following PHP constants are defined by WinBinder:</p>
+<p class="code">&nbsp;</p>
+</body>
+
+</html>

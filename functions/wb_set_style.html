@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<title>wb_set_style</title>
+<meta name="generator" content="Namo WebEditor v5.0">
+
+
+<link rel="stylesheet" href="../help.css">
+
+
+</head>
+
+<body>
+<!--KW:
+wb_set_style
+-->
+<h2>wb_set_style</h2>
+<p>bool <b>wb_set_style</b> (int wbobject,  int style [, bool set])</p>
+<p>Sets or resets one or more styles of the WinBinder object <i>wbobject</i>. Only
+a limited set of styles is supported due to Windows limitations.</p>
+<h1><b>What it does</b></h1>
+<p>The following
+styles can be set or reset:</p>
+<table border="1" cellspacing="0" bordercolordark="white" bordercolorlight="black" width="70%">
+    <tr>
+        <th width="74">            <p>Class</p>
+        </th>
+        <th width="143">            <p>Styles</p>
+        </th>
+        <th width="457">            <p>Description</p>
+        </th>
+    </tr>
+    <tr>
+        <td width="74" rowspan="2">
+            <p>ListView</p>
+        </td>
+        <td width="143">
+            <p class="code">WBC_LINES</p>
+        </td>
+        <td width="457">
+            <p>Display gridlines around items</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="143">
+            <p class="code">WBC_CHECKBOXES</p>
+        </td>
+        <td width="457">
+            <p>Display check boxes in the first column of all items</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="74">
+            <p>Slider</p>
+        </td>
+        <td width="143">
+            <p class="code">WBC_LINES</p>
+        </td>
+        <td width="457">
+            <p>Show tick marks</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="74">
+            <p>TreeView</p>
+        </td>
+        <td width="143">
+            <p class="code">WBC_LINES</p>
+        </td>
+        <td width="457">
+            <p>Draw dotted lines linking children objects to their parents</p>
+        </td>
+    </tr>
+</table>
+<p> Returns
+<code>TRUE</code> on success or&nbsp;<code>FALSE</code> if an error occurs.</p>
+<h1><b>See also</b></h1>
+    <p><a href="../reference/functions_category.html#control">Control functions</a><br><a href="../reference/functions_category.html#window">Window functions</a></p>
+
+</body>
+
+</html>

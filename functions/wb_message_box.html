@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>wb_message_box</title>
+<meta name="generator" content="Namo WebEditor v5.0">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<!--KW:
+wb_message_box
+-->
+<h2>wb_message_box</h2>
+<p>int <b>wb_message_box</b> (int parent, string message [, string title [,
+int style]])</p>
+<p>Creates and displays a message box and returns a value according to
+the button&nbsp;pressed.</p>
+<h1><b>Return values</b></h1>
+<p>Pressing either button <b>Cancel</b>, <b>No</b>, <b>Ignore</b> or <b>Abort</b> 
+will return <span class="code">FALSE</span>; Pressing <b>OK</b>, <b>Yes</b> 
+or <b>Retry</b> will return <span class="code">TRUE</span>; If the function 
+is not successful it will return <span class="code">NULL</span>.</p>
+<h1><b>Message box styles</b></h1>
+<pre>WBC_INFO
+WBC_OK
+WBC_OKCANCEL
+WBC_QUESTION
+WBC_STOP
+WBC_WARNING
+WBC_YESNO
+WBC_YESNOCANCEL</pre>
+<h1><b>Example</b></h1>
+<table border="0" bgcolor="#E0E0E0" cellpadding="5" >
+<tr><td><pre>// Asks for confirmation before closing an application window
+
+function process_main($window, $id)
+{ 
+   switch($id) { 
+       case ID_EXIT: 
+       case IDCLOSE: 
+           if(wb_message_box($window, &quot;Are your sure?&quot;, APPNAME, WBC_YESNO)) 
+               wb_destroy_window($window); 
+           break;
+   }
+}</pre></td></tr>
+</table>
+<h1><b>See also</b></h1>
+<p><a href="../reference/functions_category.html#dialog">Dialog functions</a></p>
+
+<p class="code">&nbsp;</p>
+</body>
+</html>
